@@ -1,0 +1,58 @@
+<html>
+
+ <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Payroll chart page.</title>
+    <!-- Import libraries and link files  -->
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="c3.css" rel="stylesheet" type="text/css" />
+    <script src="c3.js"></script>
+    <script src="d3.js"></script>
+    <script src="helper.js"></script>  
+    <script src="script.js"></script>
+  </head>
+  
+    <nav class = "container">
+       <a href="index.html">citywide Payroll</a>
+       <a href = "information.html">Information Page</a>
+       <a href = "analysis.html">Analysis Page</a>
+    </nav>
+  <body onload="init()">
+    <div id="banner" class="container center">
+      <h1> Charts: Citywide payroll </h1>
+    </div>
+
+    <div class="container subbanner">
+      <div>
+        <p> <a href="https://data.cityofnewyork.us/City-Government/Citywide-Payroll-Data-Fiscal-Year-/k397-673e/about_data" target="_blank"> Citywide Payroll data </a> dataset from NYC Open Data. Students take the information and use the <a href="https://c3js.org/">c3.js</a> JavaScript library to visualize the results as a chart.</p>
+       </div>
+    </div>
+    <div class="container">
+      <div id="panel">
+        
+        <div class="card">
+          <h3>Select Chart Type</h3>
+          <select id="chartType" style="width:100px;">
+            <option value="bar">Bar</option>
+            <option value="pie">Pie</option>
+          </select>
+        </div>
+        
+        <div class="card">
+          <h3>amount of people for borough</h3>
+          <p><span class="highlight">amount of people for each borough</span> </p>
+          <a class="button" onclick="placeholder()"> Show Chart </a>
+        </div>
+        
+      </div>
+      <div class="card">
+       <div id="chart"></div>
+      </div>
+    </div>
+
+    <div id="footer" class="container center">
+      <h3>Citywide Payroll</h3>
+    </div>  
+  </body>
+</html>
